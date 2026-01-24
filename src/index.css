@@ -1,0 +1,49 @@
+:root {
+  /* Palette */
+  --color-primary: #F28C28; /* Industrial Orange */
+  --color-primary-dark: #D67A20;
+  --color-text: #2A2A2A; /* Anthracite */
+  --color-text-light: #555555;
+  --color-bg: #FFFFFF;
+  --color-card-bg: #FFFFFF;
+  --color-sidebar-bg: #F8F9FA;
+  --color-border: #E5E5E5;
+
+  /* Typography */
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Roboto', sans-serif;
+
+  /* Spacing & Layout */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

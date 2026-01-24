@@ -1,0 +1,42 @@
+.realizations-section {
+    background-color: var(--color-text);
+    /* Anthracite background as contrast */
+    color: white;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.realizations-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.realizations-title {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.realizations-text {
+    margin-bottom: 2rem;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+.realizations-link {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.2s;
+    border: 2px solid var(--color-primary);
+}
+
+.realizations-link:hover {
+    background-color: transparent;
+    color: var(--color-primary);
+}
