@@ -6,6 +6,20 @@
     "contact": "Contact",
     "toggle_lang": "FR"
   },
+  "hero": {
+    "tagline": "Robust & High-Performance Agricultural Machines",
+    "description": "We design and manufacture quality motorized equipment to mechanize your agricultural production and increase your yield.",
+    "cta_catalog": "View Catalog",
+    "cta_custom": "Custom Request",
+    "form_title": "Need a Specific Machine?",
+    "form_subtitle": "Describe your project and we will contact you quickly.",
+    "form_name": "Full name",
+    "form_phone": "Phone",
+    "form_email": "Email (optional)",
+    "form_message": "Describe your need...",
+    "form_submit": "Send Request",
+    "form_success": "Request sent! We will contact you soon."
+  },
   "footer": {
     "copyright": "AgroPTM. All rights reserved.",
     "follow_us": "Follow us"

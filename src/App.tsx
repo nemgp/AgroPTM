@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Sidebar } from './components/Sidebar';
@@ -7,11 +6,11 @@ import { ProductCard } from './components/ProductCard';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { Realizations } from './components/Realizations';
 import { About } from './components/About';
+import { Hero } from './components/Hero';
 import { products, categoriesKeys } from './data/products';
 import './App.css';
 
 function App() {
-  const { t } = useTranslation();
   const [selectedCategoryKey, setSelectedCategoryKey] = useState<string | null>(null);
 
   const filteredProducts = selectedCategoryKey
@@ -24,9 +23,13 @@ function App() {
 
       <main className="main-content">
 
+        {/* Hero Section - Homepage */}
+        <Hero />
+
         {/* About Section */}
         <About />
 
+        {/* Products Catalog Section */}
         <div className="catalog-container container" id="products">
           <div className="catalog-layout">
             <aside className="catalog-sidebar">
@@ -45,7 +48,10 @@ function App() {
           </div>
         </div>
 
-        <Realizations />
+        {/* Contact Section - Anchor for navigation */}
+        <div id="contact">
+          <Realizations />
+        </div>
       </main>
 
       <Footer />

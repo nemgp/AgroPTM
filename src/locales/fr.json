@@ -6,6 +6,20 @@
     "contact": "Contact",
     "toggle_lang": "EN"
   },
+  "hero": {
+    "tagline": "Machines Agricoles Robustes & Performantes",
+    "description": "Nous concevons et fabriquons des équipements motorisés de qualité pour mécaniser votre production agricole et augmenter votre rendement.",
+    "cta_catalog": "Voir le Catalogue",
+    "cta_custom": "Demande Personnalisée",
+    "form_title": "Besoin d'une Machine Spécifique ?",
+    "form_subtitle": "Décrivez votre projet et nous vous contacterons rapidement.",
+    "form_name": "Nom complet",
+    "form_phone": "Téléphone",
+    "form_email": "Email (optionnel)",
+    "form_message": "Décrivez votre besoin...",
+    "form_submit": "Envoyer la Demande",
+    "form_success": "Demande envoyée ! Nous vous contacterons bientôt."
+  },
   "footer": {
     "copyright": "AgroPTM. Tous droits réservés.",
     "follow_us": "Suivez-nous"
