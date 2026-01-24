@@ -6,6 +6,7 @@ import { Sidebar } from './components/Sidebar';
 import { ProductCard } from './components/ProductCard';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { Realizations } from './components/Realizations';
+import { About } from './components/About';
 import { products, categoriesKeys } from './data/products';
 import './App.css';
 
@@ -23,13 +24,8 @@ function App() {
 
       <main className="main-content">
 
-        {/* Hero / About Section */}
-        <section className="about-section" id="about">
-          <div className="container">
-            <h1>{t('about.title')}</h1>
-            <p>{t('about.text')}</p>
-          </div>
-        </section>
+        {/* About Section */}
+        <About />
 
         <div className="catalog-container container" id="products">
           <div className="catalog-layout">

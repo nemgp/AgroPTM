@@ -2,7 +2,7 @@
   "header": {
     "home": "Home",
     "catalog": "Catalog",
-    "company": "About Us",
+    "company": "About",
     "contact": "Contact",
     "toggle_lang": "FR"
   },
@@ -18,8 +18,15 @@
     "presses": "Presses"
   },
   "about": {
-    "title": "Engineering for your yield.",
-    "text": "AgroPTM specializes in manufacturing robust motorized machines (gasoline/diesel). We mechanize agro-food processing to reduce labor and increase farmer productivity."
+    "title": "About AgroPTM",
+    "subtitle": "Engineering for your yield",
+    "description": "AgroPTM is a Cameroonian company specialized in the design and manufacturing of robust motorized agricultural machines. Our mission is to mechanize agro-food processing to reduce labor intensity and significantly increase farmer productivity.",
+    "team_title": "Our Team",
+    "team_text": "A passionate team of engineers and technicians dedicated to agricultural innovation.",
+    "realizations_title": "Our Achievements",
+    "realization1": "Grinder-mixer in action - Efficient raw material processing",
+    "realization2": "Satisfied customer with our quality industrial equipment",
+    "realization3": "Series production - Machines ready for delivery"
   },
   "realizations": {
     "title": "Our Latest Projects",

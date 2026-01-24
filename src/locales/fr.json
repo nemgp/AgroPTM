@@ -2,7 +2,7 @@
   "header": {
     "home": "Accueil",
     "catalog": "Catalogue",
-    "company": "L'Entreprise",
+    "company": "À Propos",
     "contact": "Contact",
     "toggle_lang": "EN"
   },
@@ -18,8 +18,15 @@
     "presses": "Presses"
   },
   "about": {
-    "title": "L'ingénierie au service de votre rendement.",
-    "text": "AgroPTM est spécialisé dans la fabrication de machines motorisées robustes (essence/diesel). Nous mécanisons la transformation agroalimentaire pour réduire la pénibilité et augmenter la productivité des exploitants."
+    "title": "À Propos d'AgroPTM",
+    "subtitle": "L'ingénierie au service de votre rendement",
+    "description": "AgroPTM est une entreprise camerounaise spécialisée dans la conception et la fabrication de machines agricoles motorisées robustes. Notre mission est de mécaniser la transformation agroalimentaire pour réduire la pénibilité du travail et augmenter significativement la productivité des exploitants.",
+    "team_title": "Notre Équipe",
+    "team_text": "Une équipe passionnée d'ingénieurs et de techniciens dédiés à l'innovation agricole.",
+    "realizations_title": "Nos Réalisations",
+    "realization1": "Broyeur-mélangeur en action - Transformation efficace des matières premières",
+    "realization2": "Client satisfait avec notre équipement industriel de qualité",
+    "realization3": "Production en série - Machines prêtes pour la livraison"
   },
   "realizations": {
     "title": "Nos Dernières Réalisations",
@@ -28,7 +35,7 @@
   },
   "product": {
     "commander": "Commander sur WhatsApp",
-    "whatsapp_message": "Bonjour AgroPTM, je suis intéressé par votre machine : {{productName}} vue sur votre site web.", 
+    "whatsapp_message": "Bonjour AgroPTM, je suis intéressé par votre machine : {{productName}} vue sur votre site web.",
     "gx200": {
       "name": "Moulin à farine Mo GX200",
       "desc": "Moteur 5.5 Ch, spécial maïs et manioc. Idéal pour une production artisanale et semi-industrielle."
