@@ -12,28 +12,28 @@ export const products: Product[] = [
         nameKey: 'product.gx200.name',
         categoryKey: 'categories.Moulins', // Simplified Category key reference
         descriptionKey: 'product.gx200.desc',
-        image: 'https://placehold.co/600x400/F28C28/FFFFFF?text=Moulin+GX200'
+        image: '/AgroPTM/realizations/machine1.png'
     },
     {
         id: '2',
         nameKey: 'product.broyeur.name',
         categoryKey: 'categories.Broyeurs',
         descriptionKey: 'product.broyeur.desc',
-        image: 'https://placehold.co/600x400/333333/FFFFFF?text=Broyeur+Melangeur'
+        image: '/AgroPTM/realizations/machine2.jpg'
     },
     {
         id: '3',
         nameKey: 'product.raffles.name',
         categoryKey: 'categories.Moulins',
         descriptionKey: 'product.raffles.desc',
-        image: 'https://placehold.co/600x400/F28C28/FFFFFF?text=Moulin+Raffles'
+        image: '/AgroPTM/realizations/machine3.jpg'
     },
     {
         id: '4',
         nameKey: 'product.presse.name',
         categoryKey: 'categories.Presses',
         descriptionKey: 'product.presse.desc',
-        image: 'https://placehold.co/600x400/333333/FFFFFF?text=Presse+Huile'
+        image: '/AgroPTM/realizations/machine1.png'
     }
 ];
 
