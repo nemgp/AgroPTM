@@ -22,7 +22,8 @@
 }
 
 .logo-img {
-    height: 80px;
+    height: 120px;
+    /* Increased from 80px to zoom */
     width: auto;
     object-fit: contain;
 }
