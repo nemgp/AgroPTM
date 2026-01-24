@@ -1,14 +1,15 @@
 import React from 'react';
 import { Facebook, Menu } from 'lucide-react';
 import './Header.css';
+import logo from '../assets/logo.png';
 
 export const Header: React.FC = () => {
     return (
         <header className="header">
             <div className="header-container">
                 {/* Logo */}
-                <div className="logo">
-                    Agro<span>PTM</span>
+                <div className="logo-container">
+                    <img src={logo} alt="AgroPTM" className="logo-img" />
                 </div>
 
                 {/* Desktop Navigation */}

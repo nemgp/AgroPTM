@@ -16,16 +16,15 @@
     justify-content: space-between;
 }
 
-.logo {
-    font-family: var(--font-heading);
-    font-weight: 900;
-    font-size: 1.5rem;
-    color: var(--color-text);
-    letter-spacing: -0.5px;
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-.logo span {
-    color: var(--color-primary);
+.logo-img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-desktop ul {
