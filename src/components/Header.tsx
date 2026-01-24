@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { NavLink } from 'react-router-dom';
 import { Facebook, Menu } from 'lucide-react';
 import './Header.css';
 import logo from '../assets/logo.png';
@@ -7,29 +8,6 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const Header: React.FC = () => {
     const { t } = useTranslation();
-    const [activeSection, setActiveSection] = useState('home');
-
-    useEffect(() => {
-        const sections = ['home', 'about', 'products', 'contact'];
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                    }
-                });
-            },
-            { threshold: 0.3 }
-        );
-
-        sections.forEach((id) => {
-            const element = document.getElementById(id);
-            if (element) observer.observe(element);
-        });
-
-        return () => observer.disconnect();
-    }, []);
 
     return (
         <header className="header">
@@ -43,36 +21,24 @@ export const Header: React.FC = () => {
                 <nav className="nav-desktop">
                     <ul>
                         <li>
-                            <a
-                                href="#home"
-                                className={activeSection === 'home' ? 'active' : ''}
-                            >
+                            <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
                                 {t('header.home')}
-                            </a>
+                            </NavLink>
                         </li>
                         <li>
-                            <a
-                                href="#products"
-                                className={activeSection === 'products' ? 'active' : ''}
-                            >
+                            <NavLink to="/catalog" className={({ isActive }) => isActive ? 'active' : ''}>
                                 {t('header.catalog')}
-                            </a>
+                            </NavLink>
                         </li>
                         <li>
-                            <a
-                                href="#about"
-                                className={activeSection === 'about' ? 'active' : ''}
-                            >
+                            <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>
                                 {t('header.company')}
-                            </a>
+                            </NavLink>
                         </li>
                         <li>
-                            <a
-                                href="#contact"
-                                className={activeSection === 'contact' ? 'active' : ''}
-                            >
+                            <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>
                                 {t('header.contact')}
-                            </a>
+                            </NavLink>
                         </li>
                     </ul>
                 </nav>

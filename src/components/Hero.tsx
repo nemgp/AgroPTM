@@ -47,7 +47,7 @@ export const Hero: React.FC = () => {
                     <p>{t('hero.description')}</p>
 
                     <div className="hero-cta">
-                        <a href="#products" className="btn-primary">
+                        <a href="#/catalog" className="btn-primary">
                             {t('hero.cta_catalog')}
                         </a>
                         <a href="#custom-form" className="btn-secondary">
