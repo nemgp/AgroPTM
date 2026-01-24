@@ -52,6 +52,22 @@
     color: var(--color-primary);
 }
 
+.nav-desktop a.active {
+    color: var(--color-primary);
+    position: relative;
+}
+
+.nav-desktop a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
 .header-actions {
     display: flex;
     align-items: center;
