@@ -41,12 +41,6 @@ export const Hero: React.FC = () => {
 
     return (
         <section className="hero-section" id="home">
-            {/* Background Image */}
-            <div className="hero-bg">
-                <img src="/AgroPTM/hero-bg.png" alt="Industrial Agriculture" />
-            </div>
-            <div className="hero-overlay"></div>
-
             <div className="hero-container">
                 {/* Hero Content */}
                 <div className="hero-content">
@@ -79,7 +73,6 @@ export const Hero: React.FC = () => {
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                placeholder={t('hero.form_name')}
                                 required
                             />
                         </div>
@@ -92,13 +85,11 @@ export const Hero: React.FC = () => {
                                 name="phone"
                                 value={formData.phone}
                                 onChange={handleChange}
-                                placeholder="+237 ..."
                                 required
                             />
                         </div>
 
                         <div className="form-group">
-                            {/* Email can be optional visually or logic wise */}
                             <label htmlFor="email">{t('hero.form_email')}</label>
                             <input
                                 type="email"
@@ -106,7 +97,6 @@ export const Hero: React.FC = () => {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                placeholder="email@example.com"
                             />
                         </div>
 
@@ -117,7 +107,6 @@ export const Hero: React.FC = () => {
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
-                                placeholder={t('hero.form_message')}
                                 required
                             />
                         </div>
