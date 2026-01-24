@@ -1,32 +1,35 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './Sidebar.css';
 
 interface SidebarProps {
-    categories: string[];
-    selectedCategory: string | null;
-    onSelectCategory: (category: string | null) => void;
+    categoriesKeys: string[];
+    selectedCategoryKey: string | null;
+    onSelectCategoryKey: (categoryKey: string | null) => void;
 }
 
-export const Sidebar: React.FC<SidebarProps> = ({ categories, selectedCategory, onSelectCategory }) => {
+export const Sidebar: React.FC<SidebarProps> = ({ categoriesKeys, selectedCategoryKey, onSelectCategoryKey }) => {
+    const { t } = useTranslation();
+
     return (
         <aside className="sidebar">
-            <h3 className="sidebar-title">Catégories</h3>
+            <h3 className="sidebar-title">{t('sidebar.title')}</h3>
             <ul className="category-list">
                 <li>
                     <button
-                        className={`category-btn ${selectedCategory === null ? 'active' : ''}`}
-                        onClick={() => onSelectCategory(null)}
+                        className={`category-btn ${selectedCategoryKey === null ? 'active' : ''}`}
+                        onClick={() => onSelectCategoryKey(null)}
                     >
-                        Tout voir
+                        {t('sidebar.all')}
                     </button>
                 </li>
-                {categories.map((cat) => (
-                    <li key={cat}>
+                {categoriesKeys.map((catKey) => (
+                    <li key={catKey}>
                         <button
-                            className={`category-btn ${selectedCategory === cat ? 'active' : ''}`}
-                            onClick={() => onSelectCategory(cat)}
+                            className={`category-btn ${selectedCategoryKey === catKey ? 'active' : ''}`}
+                            onClick={() => onSelectCategoryKey(catKey)}
                         >
-                            {cat}
+                            {t(catKey)}
                         </button>
                     </li>
                 ))}

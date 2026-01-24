@@ -1,0 +1,54 @@
+{
+  "header": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "company": "About Us",
+    "contact": "Contact",
+    "toggle_lang": "FR"
+  },
+  "footer": {
+    "copyright": "AgroPTM. All rights reserved.",
+    "follow_us": "Follow us"
+  },
+  "sidebar": {
+    "title": "Categories",
+    "all": "View All",
+    "moulins": "Mills",
+    "broyeurs": "Grinders",
+    "presses": "Presses"
+  },
+  "about": {
+    "title": "Engineering for your yield.",
+    "text": "AgroPTM specializes in manufacturing robust motorized machines (gasoline/diesel). We mechanize agro-food processing to reduce labor and increase farmer productivity."
+  },
+  "realizations": {
+    "title": "Our Latest Projects",
+    "text": "Discover our machines in the field. Proven robustness and efficiency.",
+    "button": "See news in pictures"
+  },
+  "product": {
+    "commander": "Order on WhatsApp",
+    "whatsapp_message": "Hello AgroPTM, I am interested in your machine: {{productName}} seen on your website.",
+    "gx200": {
+      "name": "Mo GX200 Flour Mill",
+      "desc": "5.5 HP Engine, special for maize and cassava. Ideal for artisanal and semi-industrial production."
+    },
+    "broyeur": {
+      "name": "Grinder-Mixer",
+      "desc": "Models for livestock and poultry feed. Ensures homogeneous mixing for optimal nutrition."
+    },
+    "raffles": {
+      "name": "Corn Cob Mill",
+      "desc": "Agricultural residue valorization. Transform waste into usable resources."
+    },
+    "presse": {
+      "name": "Stripper & Oil Press",
+      "desc": "Complete solutions for the palm oil industry. Efficient and robust extraction."
+    }
+  },
+  "categories": {
+    "Moulins": "Mills",
+    "Broyeurs": "Grinders",
+    "Presses": "Presses"
+  }
+}

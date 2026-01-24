@@ -1,0 +1,54 @@
+{
+  "header": {
+    "home": "Accueil",
+    "catalog": "Catalogue",
+    "company": "L'Entreprise",
+    "contact": "Contact",
+    "toggle_lang": "EN"
+  },
+  "footer": {
+    "copyright": "AgroPTM. Tous droits réservés.",
+    "follow_us": "Suivez-nous"
+  },
+  "sidebar": {
+    "title": "Catégories",
+    "all": "Tout voir",
+    "moulins": "Moulins",
+    "broyeurs": "Broyeurs",
+    "presses": "Presses"
+  },
+  "about": {
+    "title": "L'ingénierie au service de votre rendement.",
+    "text": "AgroPTM est spécialisé dans la fabrication de machines motorisées robustes (essence/diesel). Nous mécanisons la transformation agroalimentaire pour réduire la pénibilité et augmenter la productivité des exploitants."
+  },
+  "realizations": {
+    "title": "Nos Dernières Réalisations",
+    "text": "Découvrez nos machines sur le terrain. Robustess et efficacité prouvées.",
+    "button": "Voir les actualités en images"
+  },
+  "product": {
+    "commander": "Commander sur WhatsApp",
+    "whatsapp_message": "Bonjour AgroPTM, je suis intéressé par votre machine : {{productName}} vue sur votre site web.", 
+    "gx200": {
+      "name": "Moulin à farine Mo GX200",
+      "desc": "Moteur 5.5 Ch, spécial maïs et manioc. Idéal pour une production artisanale et semi-industrielle."
+    },
+    "broyeur": {
+      "name": "Broyeur-Mélangeur",
+      "desc": "Modèles pour aliments de bétail et volaille. Assure un mélange homogène pour une nutrition optimale."
+    },
+    "raffles": {
+      "name": "Moulin de raffles de maïs",
+      "desc": "Valorisation des résidus agricoles. Transformez les déchets en ressources utilisables."
+    },
+    "presse": {
+      "name": "Égrappeuse & Presse à huile",
+      "desc": "Solutions complètes pour la filière huile de palme. Extraction efficace et robuste."
+    }
+  },
+  "categories": {
+    "Moulins": "Moulins",
+    "Broyeurs": "Broyeurs",
+    "Presses": "Presses"
+  }
+}

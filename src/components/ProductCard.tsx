@@ -1,12 +1,13 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './ProductCard.css';
 
 export interface Product {
     id: string;
-    name: string;
-    category: string;
-    description: string;
-    image: string; // URL or placeholder
+    nameKey: string;
+    categoryKey: string;
+    descriptionKey: string;
+    image: string;
 }
 
 interface ProductCardProps {
@@ -14,22 +15,24 @@ interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+    const { t } = useTranslation();
+    const productName = t(product.nameKey);
+
     const whatsappUrl = `https://wa.me/237678646770?text=${encodeURIComponent(
-        `Bonjour AgroPTM, je suis intéressé par votre machine : ${product.name} vue sur votre site web.`
+        t('product.whatsapp_message', { productName })
     )}`;
 
     return (
         <div className="product-card">
             <div className="product-image-container">
-                {/* Placeholder if no image provided, but we'll assume image prop is valid or handled */}
-                <img src={product.image} alt={product.name} className="product-image" />
+                <img src={product.image} alt={productName} className="product-image" />
             </div>
             <div className="product-content">
-                <span className="product-category">{product.category}</span>
-                <h3 className="product-title">{product.name}</h3>
-                <p className="product-description">{product.description}</p>
+                <span className="product-category">{t(product.categoryKey)}</span>
+                <h3 className="product-title">{productName}</h3>
+                <p className="product-description">{t(product.descriptionKey)}</p>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-commander">
-                    Commander sur WhatsApp
+                    {t('product.commander')}
                 </a>
             </div>
         </div>

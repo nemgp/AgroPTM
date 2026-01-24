@@ -1,13 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './Realizations.css';
 
 export const Realizations: React.FC = () => {
+    const { t } = useTranslation();
     return (
         <section className="realizations-section">
             <div className="realizations-container">
-                <h2 className="realizations-title">Nos Dernières Réalisations</h2>
+                <h2 className="realizations-title">{t('realizations.title')}</h2>
                 <p className="realizations-text">
-                    Découvrez nos machines sur le terrain. Robustess et efficacité prouvées.
+                    {t('realizations.text')}
                 </p>
                 <a
                     href="https://www.facebook.com/photo/?fbid=1520187260113314&set=pb.100063661639375.-2207520000"
@@ -15,7 +17,7 @@ export const Realizations: React.FC = () => {
                     rel="noopener noreferrer"
                     className="realizations-link"
                 >
-                    Voir les actualités en images
+                    {t('realizations.button')}
                 </a>
             </div>
         </section>

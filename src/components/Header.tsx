@@ -1,9 +1,13 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Facebook, Menu } from 'lucide-react';
 import './Header.css';
 import logo from '../assets/logo.png';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const Header: React.FC = () => {
+    const { t } = useTranslation();
+
     return (
         <header className="header">
             <div className="header-container">
@@ -15,10 +19,10 @@ export const Header: React.FC = () => {
                 {/* Desktop Navigation */}
                 <nav className="nav-desktop">
                     <ul>
-                        <li><a href="#home">Accueil</a></li>
-                        <li><a href="#products">Catalogue</a></li>
-                        <li><a href="#about">L'Entreprise</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home">{t('header.home')}</a></li>
+                        <li><a href="#products">{t('header.catalog')}</a></li>
+                        <li><a href="#about">{t('header.company')}</a></li>
+                        <li><a href="#contact">{t('header.contact')}</a></li>
                     </ul>
                 </nav>
 
@@ -33,6 +37,7 @@ export const Header: React.FC = () => {
                     >
                         <Facebook size={24} />
                     </a>
+                    <LanguageSwitcher />
                     <button className="mobile-menu-btn" aria-label="Menu">
                         <Menu size={24} />
                     </button>

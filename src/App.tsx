@@ -1,18 +1,20 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Sidebar } from './components/Sidebar';
 import { ProductCard } from './components/ProductCard';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { Realizations } from './components/Realizations';
-import { products, categories } from './data/products';
-import './App.css'; // We'll create this next
+import { products, categoriesKeys } from './data/products';
+import './App.css';
 
 function App() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const { t } = useTranslation();
+  const [selectedCategoryKey, setSelectedCategoryKey] = useState<string | null>(null);
 
-  const filteredProducts = selectedCategory
-    ? products.filter(p => p.category === selectedCategory)
+  const filteredProducts = selectedCategoryKey
+    ? products.filter(p => p.categoryKey === selectedCategoryKey)
     : products;
 
   return (
@@ -24,11 +26,8 @@ function App() {
         {/* Hero / About Section */}
         <section className="about-section" id="about">
           <div className="container">
-            <h1>L'ingénierie au service de votre rendement.</h1>
-            <p>
-              AgroPTM est spécialisé dans la fabrication de machines motorisées robustes (essence/diesel).
-              Nous mécanisons la transformation agroalimentaire pour réduire la pénibilité et augmenter la productivité des exploitants.
-            </p>
+            <h1>{t('about.title')}</h1>
+            <p>{t('about.text')}</p>
           </div>
         </section>
 
@@ -36,9 +35,9 @@ function App() {
           <div className="catalog-layout">
             <aside className="catalog-sidebar">
               <Sidebar
-                categories={categories}
-                selectedCategory={selectedCategory}
-                onSelectCategory={setSelectedCategory}
+                categoriesKeys={categoriesKeys}
+                selectedCategoryKey={selectedCategoryKey}
+                onSelectCategoryKey={setSelectedCategoryKey}
               />
             </aside>
 

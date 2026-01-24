@@ -1,16 +1,18 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Facebook } from 'lucide-react';
 import './Footer.css';
 
 export const Footer: React.FC = () => {
+    const { t } = useTranslation();
     return (
         <footer className="footer">
             <div className="footer-container">
                 <div className="footer-copyright">
-                    © {new Date().getFullYear()} AgroPTM. Tous droits réservés.
+                    © {new Date().getFullYear()} {t('footer.copyright')}
                 </div>
                 <div className="footer-social">
-                    <span>Suivez-nous</span>
+                    <span>{t('footer.follow_us')}</span>
                     <a
                         href="https://www.facebook.com/p/Agroptm-100063661639375/"
                         target="_blank"
