@@ -30,8 +30,28 @@ export const Header: React.FC = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/catalog" className={({ isActive }) => isActive ? 'active' : ''}>
-                                {t('header.catalog')}
+                            <NavLink to="/machines" className={({ isActive }) => isActive ? 'active' : ''}>
+                                {t('header.machines')}
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/services" className={({ isActive }) => isActive ? 'active' : ''}>
+                                {t('header.services')}
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''}>
+                                {t('header.projects')}
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/invest" className={({ isActive }) => isActive ? 'active' : ''}>
+                                {t('header.invest')}
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/blog" className={({ isActive }) => isActive ? 'active' : ''}>
+                                {t('header.blog')}
                             </NavLink>
                         </li>
                         <li>
@@ -45,6 +65,7 @@ export const Header: React.FC = () => {
                             </NavLink>
                         </li>
                     </ul>
+                    <p className="header-tagline">{t('header.tagline')}</p>
                 </nav>
 
                 {/* Social & Mobile Menu */}
@@ -74,8 +95,28 @@ export const Header: React.FC = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/catalog" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>
-                            {t('header.catalog')}
+                        <NavLink to="/machines" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>
+                            {t('header.machines')}
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/services" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>
+                            {t('header.services')}
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/projects" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>
+                            {t('header.projects')}
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/invest" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>
+                            {t('header.invest')}
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/blog" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>
+                            {t('header.blog')}
                         </NavLink>
                     </li>
                     <li>
@@ -86,6 +127,11 @@ export const Header: React.FC = () => {
                     <li>
                         <NavLink to="/contact" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>
                             {t('header.contact')}
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/admin" onClick={closeMenu} className="admin-link">
+                            Admin
                         </NavLink>
                     </li>
                 </ul>

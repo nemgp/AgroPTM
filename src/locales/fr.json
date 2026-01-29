@@ -1,13 +1,19 @@
 {
   "header": {
     "home": "Accueil",
-    "catalog": "Catalogue",
+    "machines": "Machines & Équipements",
+    "services": "Services",
+    "projects": "Projets & Réalisations",
+    "invest": "Investir / Partenariats",
+    "blog": "Actualités",
     "company": "À Propos",
     "contact": "Contact",
-    "toggle_lang": "EN"
+    "toggle_lang": "EN",
+    "tagline": "À AgroPTM, nous fabriquons les industriels !!!"
   },
   "hero": {
     "tagline": "Machines Agricoles Robustes & Performantes",
+    "subtitle": "À AgroPTM, nous fabriquons les industriels !!!",
     "description": "Nous concevons et fabriquons des équipements motorisés de qualité pour mécaniser votre production agricole et augmenter votre rendement.",
     "cta_catalog": "Voir le Catalogue",
     "cta_custom": "Demande Personnalisée",

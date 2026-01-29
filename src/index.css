@@ -1,22 +1,40 @@
 :root {
   /* Palette */
-  --color-primary: #F28C28; /* Industrial Orange */
-  --color-primary-dark: #D67A20;
-  --color-text: #2A2A2A; /* Anthracite */
-  --color-text-light: #555555;
-  --color-bg: #FFFFFF;
-  --color-card-bg: #FFFFFF;
-  --color-sidebar-bg: #F8F9FA;
-  --color-border: #E5E5E5;
+  --color-primary: #F57C00;
+  /* Vibrant Orange */
+  --color-primary-dark: #EF6C00;
+  --color-accent: #00E5FF;
+  /* Cyan Accent */
+
+  /* Dark Theme Colors */
+  --color-bg: #121212;
+  /* Very dark grey, almost black */
+  --color-bg-secondary: #1E1E1E;
+  /* Slightly lighter for cards/sections */
+  --color-surface-glass: rgba(30, 30, 30, 0.7);
+  /* For glassmorphism */
+
+  --color-text: #FFFFFF;
+  --color-text-secondary: #B0B0B0;
+
+  --color-border: #333333;
+  --color-border-accent: rgba(0, 229, 255, 0.3);
+  /* Cyan border */
 
   /* Typography */
   --font-heading: 'Merriweather', serif;
+  /* Robust serif for headings */
   --font-body: 'Roboto', sans-serif;
+  /* Clean sans-serif for body */
 
   /* Spacing & Layout */
   --radius-sm: 4px;
   --radius-md: 8px;
-  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --radius-lg: 16px;
+  --shadow-card: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  /* Deep shadow for glassmorphism */
+  --shadow-glow: 0 0 15px rgba(0, 229, 255, 0.2);
+  /* Cyan glow */
 }
 
 * {
@@ -31,7 +49,12 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--color-text);
   margin-top: 0;
@@ -46,4 +69,23 @@ button {
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.2s;
+}
+
+/* Scrollbar styling for dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
 }

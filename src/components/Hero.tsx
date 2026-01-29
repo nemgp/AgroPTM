@@ -44,15 +44,15 @@ export const Hero: React.FC = () => {
             <div className="hero-container">
                 {/* Hero Content */}
                 <div className="hero-content">
-                    <h1>{t('hero.tagline')}</h1>
-                    <p>{t('hero.description')}</p>
+                    <h1>Machines Agricoles <br />Robustes & Performantes</h1>
+                    <p>Nous concevons et fabriquons des équipements motorisés de qualité pour mécaniser votre production agricole et augmenter votre rendement.</p>
 
                     <div className="hero-cta">
-                        <NavLink to="/catalog" className="btn-primary">
-                            {t('hero.cta_catalog')}
+                        <NavLink to="/products" className="btn-primary">
+                            Voir le Catalogue
                         </NavLink>
                         <a href="#custom-form" className="btn-secondary">
-                            {t('hero.cta_custom')}
+                            Demande Personnalisée
                         </a>
                     </div>
                 </div>

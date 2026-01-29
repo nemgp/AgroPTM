@@ -1,13 +1,19 @@
 {
   "header": {
     "home": "Home",
-    "catalog": "Catalog",
+    "machines": "Machines & Equipment",
+    "services": "Services",
+    "projects": "Projects & Achievements",
+    "invest": "Invest / Partnerships",
+    "blog": "News",
     "company": "About",
     "contact": "Contact",
-    "toggle_lang": "FR"
+    "toggle_lang": "FR",
+    "tagline": "At AgroPTM, we manufacture industrials !!!"
   },
   "hero": {
     "tagline": "Robust & High-Performance Agricultural Machines",
+    "subtitle": "At AgroPTM, we manufacture industrials !!!",
     "description": "We design and manufacture quality motorized equipment to mechanize your agricultural production and increase your yield.",
     "cta_catalog": "View Catalog",
     "cta_custom": "Custom Request",
