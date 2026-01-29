@@ -1,6 +1,6 @@
 .hero-section {
     background-color: var(--color-bg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1595914603953-b6d8c465b863?q=80&w=2070&auto=format&fit=crop');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=2068&auto=format&fit=crop');
     /* Placeholder tractor image */
     background-size: cover;
     background-position: center;
