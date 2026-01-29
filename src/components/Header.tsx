@@ -119,11 +119,6 @@ export const Header: React.FC = () => {
                             {t('header.contact')}
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink to="/admin" onClick={closeMenu} className="admin-link">
-                            Admin
-                        </NavLink>
-                    </li>
                 </ul>
             </nav>
         </header>
