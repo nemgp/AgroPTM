@@ -22,7 +22,9 @@ export interface Request {
     email?: string;
     message: string;
     date: string;
+    status?: 'nouvelle' | 'en_cours' | 'traitee';
 }
+
 
 // ============ PRODUCTS API ============
 

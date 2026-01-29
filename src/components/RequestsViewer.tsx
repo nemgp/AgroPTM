@@ -11,6 +11,7 @@ interface Request {
     email?: string;
     message: string;
     date: string;
+    status?: 'nouvelle' | 'en_cours' | 'traitee';
 }
 
 export const RequestsViewer: React.FC = () => {
@@ -33,7 +34,8 @@ export const RequestsViewer: React.FC = () => {
                     phone: '+237 6 XX XX XX XX',
                     email: 'jean@example.com',
                     message: 'Je souhaite un moulin personnalisé pour mon exploitation de 5 hectares.',
-                    date: '2026-01-28'
+                    date: '2026-01-28',
+                    status: 'nouvelle'
                 },
                 {
                     id: '2',
@@ -41,7 +43,8 @@ export const RequestsViewer: React.FC = () => {
                     name: 'Marie Kamga',
                     phone: '+237 6 YY YY YY YY',
                     message: 'Demande de devis pour un broyeur-mélangeur.',
-                    date: '2026-01-27'
+                    date: '2026-01-27',
+                    status: 'en_cours'
                 }
             ]);
             setLoading(false);
@@ -51,7 +54,12 @@ export const RequestsViewer: React.FC = () => {
         try {
             setLoading(true);
             const data = await GoogleSheetsAPI.getRequests();
-            setRequests(data);
+            // Ensure all requests have a status (default to 'nouvelle')
+            const requestsWithStatus = data.map(req => ({
+                ...req,
+                status: req.status || 'nouvelle'
+            }));
+            setRequests(requestsWithStatus);
         } catch (error) {
             console.error('Erreur lors du chargement des demandes:', error);
             alert('Erreur lors du chargement des demandes. Vérifiez la configuration Google Sheets.');
@@ -60,12 +68,40 @@ export const RequestsViewer: React.FC = () => {
         }
     };
 
+    const handleStatusChange = (requestId: string, newStatus: 'nouvelle' | 'en_cours' | 'traitee') => {
+        setRequests(prevRequests =>
+            prevRequests.map(req =>
+                req.id === requestId ? { ...req, status: newStatus } : req
+            )
+        );
+        // TODO: Update status in Google Sheets
+        console.log(`Status updated for request ${requestId}: ${newStatus}`);
+    };
+
     const getTypeLabel = (type: string) => {
         switch (type) {
             case 'custom': return '🔧 Demande Personnalisée';
             case 'quote': return '💰 Demande de Devis';
             case 'contact': return '📧 Contact';
             default: return type;
+        }
+    };
+
+    const getStatusLabel = (status?: string) => {
+        switch (status) {
+            case 'nouvelle': return 'Nouvelle';
+            case 'en_cours': return 'En cours';
+            case 'traitee': return 'Traitée';
+            default: return 'Nouvelle';
+        }
+    };
+
+    const getStatusClass = (status?: string) => {
+        switch (status) {
+            case 'nouvelle': return 'status-nouvelle';
+            case 'en_cours': return 'status-en-cours';
+            case 'traitee': return 'status-traitee';
+            default: return 'status-nouvelle';
         }
     };
 
@@ -103,7 +139,12 @@ export const RequestsViewer: React.FC = () => {
                     {requests.map(request => (
                         <div key={request.id} className="request-card">
                             <div className="request-header">
-                                <span className="request-type">{getTypeLabel(request.type)}</span>
+                                <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+                                    <span className="request-type">{getTypeLabel(request.type)}</span>
+                                    <span className={`request-status ${getStatusClass(request.status)}`}>
+                                        {getStatusLabel(request.status)}
+                                    </span>
+                                </div>
                                 <span className="request-date">
                                     {new Date(request.date).toLocaleDateString('fr-FR')}
                                 </span>
@@ -123,6 +164,19 @@ export const RequestsViewer: React.FC = () => {
                             </div>
 
                             <div className="request-actions">
+                                <div className="status-selector">
+                                    <label htmlFor={`status-${request.id}`}>Statut :</label>
+                                    <select
+                                        id={`status-${request.id}`}
+                                        value={request.status || 'nouvelle'}
+                                        onChange={(e) => handleStatusChange(request.id, e.target.value as any)}
+                                        className="status-select"
+                                    >
+                                        <option value="nouvelle">Nouvelle</option>
+                                        <option value="en_cours">En cours</option>
+                                        <option value="traitee">Traitée</option>
+                                    </select>
+                                </div>
                                 <a
                                     href={`https://wa.me/${request.phone.replace(/\s/g, '')}?text=Bonjour%20${encodeURIComponent(request.name)}%2C%20nous%20avons%20bien%20re%C3%A7u%20votre%20demande.`}
                                     target="_blank"
