@@ -9,12 +9,10 @@ export const Footer: React.FC = () => {
     return (
         <footer className="footer">
             <div className="footer-container">
-                <div className="footer-copyright">
-                    <Link to="/admin" className="footer-admin-link" aria-label="Administration">
-                        <Settings size={16} />
-                    </Link>
-                    © {new Date().getFullYear()} {t('footer.copyright')}
-                </div>
+                <Link to="/admin" className="footer-admin-link" aria-label="Administration">
+                    <Settings size={20} />
+                </Link>
+
                 <div className="footer-social">
                     <span>{t('footer.follow_us')}</span>
                     <a
@@ -25,6 +23,10 @@ export const Footer: React.FC = () => {
                     >
                         <Facebook size={20} />
                     </a>
+                </div>
+
+                <div className="footer-copyright">
+                    © {new Date().getFullYear()} {t('footer.copyright')}
                 </div>
             </div>
         </footer>
