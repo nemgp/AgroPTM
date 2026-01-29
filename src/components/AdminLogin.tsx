@@ -4,6 +4,7 @@ import { useAuth } from '../contexts/authContext';
 import './AdminLogin.css';
 
 const AdminLogin: React.FC = () => {
+    const [username, setUsername] = useState('Kazor');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
@@ -42,10 +43,9 @@ const AdminLogin: React.FC = () => {
                     <input
                         type="text"
                         id="username"
-                        value="Kazor"
-                        readOnly
-                        disabled
-                        style={{ cursor: 'not-allowed', opacity: 0.7 }}
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        placeholder="Entrez votre identifiant"
                     />
                 </div>
 

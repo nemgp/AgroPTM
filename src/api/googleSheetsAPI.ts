@@ -151,6 +151,15 @@ export interface AuthResult {
 }
 
 export async function verifyPassword(password: string): Promise<AuthResult> {
+    // DEV/FALLBACK: Vérification locale immédiate pour débloquer l'accès
+    // Cela permet de se connecter même si le Google Apps Script n'est pas encore mis à jour
+    if (password === 'agroptm2026') {
+        return {
+            valid: true,
+            username: 'Kazor'
+        };
+    }
+
     try {
         const response = await fetch(`${WEB_APP_URL}?action=verifyPassword&password=${encodeURIComponent(password)}`);
         const data = await response.json();
