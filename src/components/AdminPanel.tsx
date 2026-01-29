@@ -4,8 +4,8 @@ import { LogOut, User } from 'lucide-react';
 import './AdminPanel.css';
 
 interface AdminPanelProps {
-    activeTab: 'requests' | 'products' | 'settings';
-    onTabChange: (tab: 'requests' | 'products' | 'settings') => void;
+    activeTab: 'requests' | 'products' | 'content' | 'settings';
+    onTabChange: (tab: 'requests' | 'products' | 'content' | 'settings') => void;
 }
 
 export const AdminPanel: React.FC<AdminPanelProps> = ({ activeTab, onTabChange }) => {
@@ -46,6 +46,12 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ activeTab, onTabChange }
                     onClick={() => onTabChange('products')}
                 >
                     🏭 Gestion du Catalogue
+                </button>
+                <button
+                    className={`tab-button ${activeTab === 'content' ? 'active' : ''}`}
+                    onClick={() => onTabChange('content')}
+                >
+                    📰 Actualités & Réalisations
                 </button>
                 <button
                     className={`tab-button ${activeTab === 'settings' ? 'active' : ''}`}

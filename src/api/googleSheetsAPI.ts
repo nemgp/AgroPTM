@@ -25,6 +25,15 @@ export interface Request {
     status?: 'nouvelle' | 'en_cours' | 'traitee';
 }
 
+export interface ContentItem {
+    id: string;
+    type: 'news' | 'achievement';
+    title: string;
+    description: string;
+    image: string;
+    date: string;
+}
+
 
 // ============ PRODUCTS API ============
 
@@ -217,6 +226,94 @@ export async function changePassword(currentPassword: string, newPassword: strin
         }
     } catch (error) {
         console.error('Erreur lors du changement de mot de passe:', error);
+        throw error;
+    }
+}
+
+// ============ CONTENT API (News & Achievements) ============
+
+export async function getContent(): Promise<ContentItem[]> {
+    try {
+        const response = await fetch(`${WEB_APP_URL}?action=getContent`);
+        const data = await response.json();
+
+        if (data.error) {
+            throw new Error(data.error);
+        }
+
+        return data.content || [];
+    } catch (error) {
+        console.warn('API error, using mock content:', error);
+        // Fallback: Retourner des données fictives
+        return [
+            {
+                id: '1',
+                type: 'news',
+                title: 'Nouvelle machine disponible (Démo)',
+                description: 'Découvrez notre nouveau moulin à farine haute performance.',
+                image: '',
+                date: new Date().toISOString()
+            }
+        ];
+    }
+}
+
+export async function addContent(content: Omit<ContentItem, 'id' | 'date'>): Promise<string> {
+    try {
+        const response = await fetch(`${WEB_APP_URL}?action=addContent`, {
+            method: 'POST',
+            body: JSON.stringify({
+                ...content,
+                id: Date.now().toString(),
+                date: new Date().toISOString()
+            })
+        });
+
+        const data = await response.json();
+
+        if (data.error) {
+            throw new Error(data.error);
+        }
+
+        return data.id;
+    } catch (error) {
+        console.error('Erreur lors de l\'ajout du contenu:', error);
+        throw error;
+    }
+}
+
+export async function updateContent(content: ContentItem): Promise<void> {
+    try {
+        const response = await fetch(`${WEB_APP_URL}?action=updateContent`, {
+            method: 'POST',
+            body: JSON.stringify(content)
+        });
+
+        const data = await response.json();
+
+        if (data.error) {
+            throw new Error(data.error);
+        }
+    } catch (error) {
+        console.error('Erreur lors de la mise à jour du contenu:', error);
+        throw error;
+    }
+}
+
+export async function deleteContent(id: string): Promise<void> {
+    try {
+        const response = await fetch(`${WEB_APP_URL}?action=deleteContent`, {
+            method: 'POST',
+            body: JSON.stringify({ id })
+        });
+
+        const data = await response.json();
+
+        if (data.error) {
+            throw new Error(data.error);
+        }
+    } catch (error) {
+        console.error('Erreur lors de la suppression du contenu:', error);
         throw error;
     }
 }

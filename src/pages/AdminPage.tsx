@@ -4,11 +4,12 @@ import AdminLogin from '../components/AdminLogin';
 import { AdminPanel } from '../components/AdminPanel';
 import { ProductManager } from '../components/ProductManager';
 import { RequestsViewer } from '../components/RequestsViewer';
+import { ContentManager } from '../components/ContentManager';
 import { PasswordManager } from '../components/PasswordManager';
 
 export const AdminPage: React.FC = () => {
     const { isAuthenticated } = useAuth();
-    const [activeTab, setActiveTab] = useState<'requests' | 'products' | 'settings'>('requests');
+    const [activeTab, setActiveTab] = useState<'requests' | 'products' | 'content' | 'settings'>('requests');
 
     if (!isAuthenticated) {
         return <AdminLogin />;
@@ -21,6 +22,7 @@ export const AdminPage: React.FC = () => {
             <div style={{ marginTop: '2rem' }}>
                 {activeTab === 'requests' && <RequestsViewer />}
                 {activeTab === 'products' && <ProductManager />}
+                {activeTab === 'content' && <ContentManager />}
                 {activeTab === 'settings' && <PasswordManager />}
             </div>
         </div>
