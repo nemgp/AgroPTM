@@ -38,6 +38,18 @@ const AdminLogin: React.FC = () => {
                 <p className="login-subtitle">Connectez-vous pour accéder au panneau d'administration</p>
 
                 <div className="form-group">
+                    <label htmlFor="username">Identifiant</label>
+                    <input
+                        type="text"
+                        id="username"
+                        value="Kazor"
+                        readOnly
+                        disabled
+                        style={{ cursor: 'not-allowed', opacity: 0.7 }}
+                    />
+                </div>
+
+                <div className="form-group">
                     <label htmlFor="password">Mot de passe</label>
                     <input
                         type="password"
