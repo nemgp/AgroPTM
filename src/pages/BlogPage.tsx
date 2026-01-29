@@ -1,9 +1,9 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 
 export const BlogPage: React.FC = () => {
-    const { t } = useTranslation();
+    // const { t } = useTranslation();
 
     // Données temporaires - seront remplacées par Google Sheets
     const blogPosts = [

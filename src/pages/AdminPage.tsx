@@ -1,7 +1,6 @@
-```typescript
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/authContext';
-import { AdminLogin } from '../components/AdminLogin';
+import AdminLogin from '../components/AdminLogin';
 import { AdminPanel } from '../components/AdminPanel';
 import { ProductManager } from '../components/ProductManager';
 import { RequestsViewer } from '../components/RequestsViewer';
@@ -11,7 +10,6 @@ export const AdminPage: React.FC = () => {
     const { isAuthenticated } = useAuth();
     const [activeTab, setActiveTab] = useState<'requests' | 'products' | 'settings'>('requests');
 
-    // Si non authentifié, afficher le formulaire de connexion
     if (!isAuthenticated) {
         return <AdminLogin />;
     }
@@ -28,4 +26,3 @@ export const AdminPage: React.FC = () => {
         </div>
     );
 };
-```

@@ -1,8 +1,8 @@
 import React from 'react';
-import { useParams, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const BlogPostPage: React.FC = () => {
-    const { id } = useParams<{ id: string }>();
+    // const { id } = useParams<{ id: string }>();
 
     // Données temporaires - seront remplacées par Google Sheets
     const post = {

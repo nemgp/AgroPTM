@@ -1,8 +1,8 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 export const InvestPage: React.FC = () => {
-    const { t } = useTranslation();
+    // const { t } = useTranslation();
 
     return (
         <div className="page-invest" style={{ padding: '3rem 1.5rem', maxWidth: '1200px', margin: '0 auto' }}>
