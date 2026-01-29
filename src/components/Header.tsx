@@ -18,7 +18,9 @@ export const Header: React.FC = () => {
             <div className="header-container">
                 {/* Logo */}
                 <div className="logo-container">
-                    <img src={logo} alt="AgroPTM" className="logo-img" />
+                    <NavLink to="/" onClick={closeMenu}>
+                        <img src={logo} alt="AgroPTM" className="logo-img" />
+                    </NavLink>
                 </div>
 
                 {/* Desktop Navigation */}
