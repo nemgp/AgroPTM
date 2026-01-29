@@ -1,10 +1,10 @@
 {
   "header": {
     "home": "Accueil",
-    "machines": "Machines & Équipements",
+    "machines": "Équipements",
     "services": "Services",
-    "projects": "Projets & Réalisations",
-    "invest": "Investir / Partenariats",
+    "projects": "Réalisations",
+    "invest": "Partenariats",
     "blog": "Actualités",
     "company": "À Propos",
     "contact": "Contact",
