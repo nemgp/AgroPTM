@@ -52,38 +52,29 @@ export const About: React.FC = () => {
 
                         {/* Merged Items from Projects Page */}
                         <div className="gallery-item">
-                            <div style={{ height: '200px', backgroundColor: '#333', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                <span style={{ color: '#999' }}>Douala</span>
-                            </div>
-                            <div style={{ padding: '1rem' }}>
-                                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Installation Coopérative - Douala</h3>
-                                <p className="gallery-caption" style={{ textAlign: 'left', padding: 0 }}>
-                                    Installation complète de moulins et broyeurs pour une coopérative agricole.
-                                </p>
+                            <div style={{ padding: '1.5rem', background: 'white', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+                                <div>
+                                    <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Installation Coopérative - Douala</h3>
+                                    <p style={{ color: '#666', fontSize: '0.95rem' }}>Mise en place d'une unité complète de transformation pour une coopérative agricole.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div className="gallery-item">
-                            <div style={{ height: '200px', backgroundColor: '#333', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                <span style={{ color: '#999' }}>Yaoundé</span>
-                            </div>
-                            <div style={{ padding: '1rem' }}>
-                                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Projet Agroalimentaire - Yaoundé</h3>
-                                <p className="gallery-caption" style={{ textAlign: 'left', padding: 0 }}>
-                                    Équipement complet d'une unité de transformation de manioc.
-                                </p>
+                            <div style={{ padding: '1.5rem', background: 'white', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+                                <div>
+                                    <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>Projet Agroalimentaire - Yaoundé</h3>
+                                    <p style={{ color: '#666', fontSize: '0.95rem' }}>Équipement d'une unité de production agroalimentaire moderne.</p>
+                                </div>
                             </div>
                         </div>
 
                         <div className="gallery-item">
-                            <div style={{ height: '200px', backgroundColor: '#333', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                <span style={{ color: '#999' }}>Bafoussam</span>
-                            </div>
-                            <div style={{ padding: '1rem' }}>
-                                <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>GIC Agricole - Bafoussam</h3>
-                                <p className="gallery-caption" style={{ textAlign: 'left', padding: 0 }}>
-                                    Fourniture et installation de presses à huile de palme.
-                                </p>
+                            <div style={{ padding: '1.5rem', background: 'white', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+                                <div>
+                                    <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: 'var(--color-primary)' }}>GIC Agricole - Bafoussam</h3>
+                                    <p style={{ color: '#666', fontSize: '0.95rem' }}>Installation d'équipements de transformation pour un GIC agricole.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
