@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Facebook } from 'lucide-react';
+import { Facebook, Settings } from 'lucide-react';
 import './Footer.css';
 
 export const Footer: React.FC = () => {
@@ -9,6 +10,9 @@ export const Footer: React.FC = () => {
         <footer className="footer">
             <div className="footer-container">
                 <div className="footer-copyright">
+                    <Link to="/admin" className="footer-admin-link" aria-label="Administration">
+                        <Settings size={16} />
+                    </Link>
                     © {new Date().getFullYear()} {t('footer.copyright')}
                 </div>
                 <div className="footer-social">
