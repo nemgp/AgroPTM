@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './About.css';
+import teamWorking from '../assets/team-working.png';
 
 export const About: React.FC = () => {
     const { t } = useTranslation();
@@ -21,8 +22,13 @@ export const About: React.FC = () => {
                         <h2>{t('about.team_title')}</h2>
                         <p>{t('about.team_text')}</p>
                     </div>
-                    <div className="team-image">
-                        <img src="/AgroPTM/team.png" alt={t('about.team_title')} />
+                    <div className="team-images-container">
+                        <div className="team-image-wrapper">
+                            <img src="/AgroPTM/team.png" alt="Notre équipe administrative" />
+                        </div>
+                        <div className="team-image-wrapper">
+                            <img src={teamWorking} alt="Ingénieurs assemblant un tracteur" />
+                        </div>
                     </div>
                 </div>
 
