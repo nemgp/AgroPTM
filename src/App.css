@@ -2,7 +2,18 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    /* Transition douce pour le changement de fond */
+    transition: background 0.3s ease-in-out;
 }
+
+.app-layout.with-bg {
+    background-image: url('./assets/page-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 
 .container {
     max-width: 1200px;

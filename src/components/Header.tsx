@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { Facebook, Menu, X } from 'lucide-react';
 import './Header.css';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo-final.png';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const Header: React.FC = () => {
@@ -37,11 +37,6 @@ export const Header: React.FC = () => {
                         <li>
                             <NavLink to="/services" className={({ isActive }) => isActive ? 'active' : ''}>
                                 {t('header.services')}
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : ''}>
-                                {t('header.projects')}
                             </NavLink>
                         </li>
                         <li>
@@ -102,11 +97,6 @@ export const Header: React.FC = () => {
                     <li>
                         <NavLink to="/services" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>
                             {t('header.services')}
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/projects" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>
-                            {t('header.projects')}
                         </NavLink>
                     </li>
                     <li>
