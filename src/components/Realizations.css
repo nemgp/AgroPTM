@@ -1,42 +1,154 @@
-.realizations-section {
-    background-color: var(--color-text);
-    /* Anthracite background as contrast */
-    color: white;
-    padding: 4rem 1.5rem;
-    text-align: center;
-    margin-top: 4rem;
+.contact-section {
+    padding: 5rem 1.5rem;
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.05) 0%, rgba(0, 0, 0, 0.02) 100%);
 }
 
-.realizations-container {
-    max-width: 800px;
+.contact-container {
+    max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
-.realizations-title {
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.realizations-text {
-    margin-bottom: 2rem;
-    color: #ccc;
-    font-size: 1.1rem;
-}
-
-.realizations-link {
-    display: inline-block;
-    background-color: var(--color-primary);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: var(--radius-md);
+.contact-title {
+    font-size: 2.5rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background-color 0.2s;
-    border: 2px solid var(--color-primary);
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, #ff8c00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.realizations-link:hover {
-    background-color: transparent;
+.contact-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card.phone-card {
+    border-color: rgba(33, 150, 243, 0.2);
+}
+
+.contact-card.phone-card:hover {
+    border-color: #2196f3;
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.05) 0%, white 100%);
+}
+
+.contact-card.whatsapp-card {
+    border-color: rgba(37, 211, 102, 0.2);
+}
+
+.contact-card.whatsapp-card:hover {
+    border-color: #25d366;
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.05) 0%, white 100%);
+}
+
+.contact-card.facebook-card {
+    border-color: rgba(24, 119, 242, 0.2);
+}
+
+.contact-card.facebook-card:hover {
+    border-color: #1877f2;
+    background: linear-gradient(135deg, rgba(24, 119, 242, 0.05) 0%, white 100%);
+}
+
+.contact-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.phone-card .contact-icon {
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+    color: white;
+}
+
+.whatsapp-card .contact-icon {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: white;
+}
+
+.facebook-card .contact-icon {
+    background: linear-gradient(135deg, #1877f2 0%, #0d5dbf 100%);
+    color: white;
+}
+
+.contact-card:hover .contact-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.contact-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.contact-value {
+    font-size: 1.1rem;
+    font-weight: 700;
     color: var(--color-primary);
+    margin: 0.5rem 0;
+}
+
+.contact-label {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-subtitle {
+        font-size: 1rem;
+    }
+
+    .contact-methods {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-card {
+        padding: 2rem 1.5rem;
+    }
 }
