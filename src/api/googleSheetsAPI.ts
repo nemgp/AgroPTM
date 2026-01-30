@@ -64,11 +64,19 @@ export async function getProducts(): Promise<Product[]> {
 
 export async function addProduct(product: Omit<Product, 'id'>): Promise<string> {
     try {
-        const response = await fetch(`${WEB_APP_URL}?action=addProduct`, {
+        const productData = {
+            ...product,
+            id: Date.now().toString()
+        };
+
+        const response = await fetch(WEB_APP_URL, {
             method: 'POST',
+            headers: {
+                'Content-Type': 'text/plain;charset=utf-8',
+            },
             body: JSON.stringify({
-                ...product,
-                id: Date.now().toString()
+                action: 'addProduct',
+                data: productData
             })
         });
 
@@ -152,12 +160,20 @@ export async function getRequests(): Promise<Request[]> {
 
 export async function addRequest(request: Omit<Request, 'id' | 'date'>): Promise<string> {
     try {
-        const response = await fetch(`${WEB_APP_URL}?action=addRequest`, {
+        const requestData = {
+            ...request,
+            id: Date.now().toString(),
+            date: new Date().toISOString()
+        };
+
+        const response = await fetch(WEB_APP_URL, {
             method: 'POST',
+            headers: {
+                'Content-Type': 'text/plain;charset=utf-8',
+            },
             body: JSON.stringify({
-                ...request,
-                id: Date.now().toString(),
-                date: new Date().toISOString()
+                action: 'addRequest',
+                data: requestData
             })
         });
 
@@ -260,12 +276,20 @@ export async function getContent(): Promise<ContentItem[]> {
 
 export async function addContent(content: Omit<ContentItem, 'id' | 'date'>): Promise<string> {
     try {
-        const response = await fetch(`${WEB_APP_URL}?action=addContent`, {
+        const contentData = {
+            ...content,
+            id: Date.now().toString(),
+            date: new Date().toISOString()
+        };
+
+        const response = await fetch(WEB_APP_URL, {
             method: 'POST',
+            headers: {
+                'Content-Type': 'text/plain;charset=utf-8',
+            },
             body: JSON.stringify({
-                ...content,
-                id: Date.now().toString(),
-                date: new Date().toISOString()
+                action: 'addContent',
+                data: contentData
             })
         });
 
