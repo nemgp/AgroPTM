@@ -177,7 +177,18 @@ export async function addRequest(request: Omit<Request, 'id' | 'date'>): Promise
             })
         });
 
-        const data = await response.json();
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        let data;
+        const text = await response.text();
+        try {
+            data = JSON.parse(text);
+        } catch (e) {
+            console.error('API response was not JSON:', text);
+            throw new Error('La réponse du serveur n\'est pas valide (pas de JSON). Vérifiez le déploiement du script.');
+        }
 
         if (data.error) {
             throw new Error(data.error);

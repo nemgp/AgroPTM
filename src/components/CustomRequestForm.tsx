@@ -77,22 +77,11 @@ export const CustomRequestForm: React.FC<CustomRequestFormProps> = ({ title, sub
                 setFormData({ name: '', phone: '', email: '', message: '' });
                 setRequestId(null);
             }, 10000);
-        } catch (err) {
+        } catch (err: any) {
             console.error('Error submitting request:', err);
-
-            // Generate ID anyway for user reference
-            const newRequestId = generateRequestId();
-            setRequestId(newRequestId);
-
-            // Show warning in console but don't show error to user
-            console.warn('Request saved locally with ID:', newRequestId);
-            console.warn('Data:', formData);
-
-            // Reset form after 10 seconds
-            setTimeout(() => {
-                setFormData({ name: '', phone: '', email: '', message: '' });
-                setRequestId(null);
-            }, 10000);
+            // Show real error to user
+            setError(err.message || 'Une erreur est survenue lors de l\'envoi de la demande.');
+            // Do NOT generate a fake ID
         } finally {
             setIsSubmitting(false);
             document.body.style.cursor = 'default';
