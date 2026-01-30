@@ -35,10 +35,15 @@ export const About: React.FC = () => {
 
                 <section className="about-section team-section">
                     <h2>{t('about.our_team')}</h2>
-                    <div className="team-image-container">
-                        <img src={teamImage} alt="Notre équipe" className="team-image" />
-                    </div>
                     <p>{t('about.team_text')}</p>
+                    <div className="team-images-container">
+                        <div className="team-image-wrapper">
+                            <img src="/AgroPTM/team.png" alt="Notre équipe administrative" />
+                        </div>
+                        <div className="team-image-wrapper">
+                            <img src={teamImage} alt="Ingénieurs assemblant un tracteur" />
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
