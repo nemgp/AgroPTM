@@ -306,6 +306,18 @@
     font-family: inherit;
 }
 
+/* Select dropdown specific styles */
+.form-group select {
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.form-group select option {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 0.5rem;
+}
+
 .image-preview {
     margin-top: 1rem;
     border-radius: 8px;

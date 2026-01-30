@@ -79,8 +79,16 @@ export const ContentManager: React.FC = () => {
                 });
                 alert('Contenu mis à jour avec succès !');
             } else {
-                // Add
-                await GoogleSheetsAPI.addContent(formData);
+                // Add - Generate ID and date
+                const newContent = {
+                    id: Date.now().toString(),
+                    type: formData.type,
+                    title: formData.title,
+                    description: formData.description,
+                    image: formData.image,
+                    date: new Date().toISOString()
+                };
+                await GoogleSheetsAPI.addContent(newContent);
                 alert('Contenu ajouté avec succès !');
             }
 
