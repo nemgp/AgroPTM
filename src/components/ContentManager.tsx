@@ -70,6 +70,11 @@ export const ContentManager: React.FC = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
+        // Indicate loading state
+        document.body.style.cursor = 'wait';
+        const submitButton = document.querySelector('.btn-submit');
+        if (submitButton) submitButton.classList.add('loading');
+
         try {
             if (editingItem) {
                 // Update
@@ -99,6 +104,10 @@ export const ContentManager: React.FC = () => {
         } catch (error) {
             console.error('Erreur:', error);
             alert('Erreur lors de l\'enregistrement du contenu.');
+        } finally {
+            // Reset loading state
+            document.body.style.cursor = 'default';
+            if (submitButton) submitButton.classList.remove('loading');
         }
     };
 

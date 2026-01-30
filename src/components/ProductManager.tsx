@@ -69,11 +69,15 @@ export const ProductManager: React.FC = () => {
     };
 
     const handleSave = async (id: string) => {
+        // Indicate loading state
+        document.body.style.cursor = 'wait';
+
         if (!isConfigured) {
             setProducts(products.map(p =>
                 p.id === id ? { ...p, ...formData } : p
             ));
             setEditingId(null);
+            document.body.style.cursor = 'default';
             alert('Produit mis à jour ! (Mode démo - configurez Google Sheets pour la persistance)');
             return;
         }
@@ -87,6 +91,8 @@ export const ProductManager: React.FC = () => {
         } catch (error) {
             console.error('Erreur lors de la mise à jour:', error);
             alert('Erreur lors de la mise à jour du produit.');
+        } finally {
+            document.body.style.cursor = 'default';
         }
     };
 
@@ -95,8 +101,12 @@ export const ProductManager: React.FC = () => {
             return;
         }
 
+        // Indicate loading state
+        document.body.style.cursor = 'wait';
+
         if (!isConfigured) {
             setProducts(products.filter(p => p.id !== id));
+            document.body.style.cursor = 'default';
             alert('Produit supprimé ! (Mode démo - configurez Google Sheets pour la persistance)');
             return;
         }
@@ -108,6 +118,8 @@ export const ProductManager: React.FC = () => {
         } catch (error) {
             console.error('Erreur lors de la suppression:', error);
             alert('Erreur lors de la suppression du produit.');
+        } finally {
+            document.body.style.cursor = 'default';
         }
     };
 
@@ -117,6 +129,9 @@ export const ProductManager: React.FC = () => {
             return;
         }
 
+        // Indicate loading state
+        document.body.style.cursor = 'wait';
+
         if (!isConfigured) {
             const newProduct: Product = {
                 id: Date.now().toString(),
@@ -125,6 +140,7 @@ export const ProductManager: React.FC = () => {
             setProducts([...products, newProduct]);
             setShowAddForm(false);
             setFormData({ nameKey: '', categoryKey: 'Moulins', descriptionKey: '', image: '' });
+            document.body.style.cursor = 'default';
             alert('Produit ajouté ! (Mode démo - configurez Google Sheets pour la persistance)');
             return;
         }
@@ -139,6 +155,8 @@ export const ProductManager: React.FC = () => {
         } catch (error) {
             console.error('Erreur lors de l\'ajout:', error);
             alert('Erreur lors de l\'ajout du produit.');
+        } finally {
+            document.body.style.cursor = 'default';
         }
     };
 

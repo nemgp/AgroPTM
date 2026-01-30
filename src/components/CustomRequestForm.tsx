@@ -37,6 +37,9 @@ export const CustomRequestForm: React.FC<CustomRequestFormProps> = ({ title, sub
         setIsSubmitting(true);
         setError(null);
 
+        // Indicate loading state
+        document.body.style.cursor = 'wait';
+
         try {
             // Generate unique ID
             const newRequestId = generateRequestId();
@@ -92,6 +95,7 @@ export const CustomRequestForm: React.FC<CustomRequestFormProps> = ({ title, sub
             }, 10000);
         } finally {
             setIsSubmitting(false);
+            document.body.style.cursor = 'default';
         }
     };
 
